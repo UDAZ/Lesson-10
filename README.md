@@ -2,22 +2,23 @@
 
 # Lesson-10
 
-Things you may want to cover:
+bundler: not executable: bin/rails
+が出たときはbundle exec rake app:update:bin
 
-* Ruby version
+rails環境変数はhttps://qiita.com/alokrawat050/items/c68ec9578c12fe5a93a3参照
 
-* System dependencies
+まずはbatcherでbundle exec rails runner Batch::〇〇〇〇.〇〇_〇〇を試して、
+wheneverでcrontabをアップデート、crondを起動
 
-* Configuration
+batcherは
+class Batch::SendMail
+  def self.send_mail
+    @users = User.all
+    @users.each do |user|
+    DailyMailer.send_when_daily(user).deliver
+    end
+    p "メールを送信しました。"
+  end
+end
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+的な感じで！
