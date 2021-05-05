@@ -65,7 +65,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     domain:               'smtp.gmail.com',
     authentication:       'plain',
-
+    user_name:            ENV['GMAIL'],
+    password:             ENV['GPASS'],
     enable_starttls_auto: true
   }
 end
