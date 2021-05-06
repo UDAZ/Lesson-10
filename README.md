@@ -1,6 +1,6 @@
 # README
 
-# Lesson-10
+# Lesson-10 1日毎にメール定期配信
 
 bundler: not executable: bin/rails
 が出たときはbundle exec rake app:update:bin
