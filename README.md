@@ -63,6 +63,12 @@ end
 ```
 app/mailer/daily_mailer.rb
 ```
+class DailyMailer < ApplicationMailer
+    def send_when_daily(user)
+        @user = user
+        mail(to: user.email, subject: '【bookers】毎日配信テスト')
+    end
+end
 ```
 まずはbatcherでbundle exec rails runner Batch::〇〇〇〇.〇〇_〇〇を試して、
 wheneverでcrontabをアップデート、crondを起動
