@@ -73,9 +73,15 @@ end
 ### ⑤send_when_dailyのviewを作成
 send_when_daily.html.erb
 ```
+<h2><%= @user.name %> 様</h2>
+
+<p>メール配信のテストです。</p>
 ```
 send_when_daily.text.erb
 ```
+<%= @user.name %> 様
+
+メール配信のテストです。
 ```
 まずはbatcherでbundle exec rails runner Batch::〇〇〇〇.〇〇_〇〇を試して、
 wheneverでcrontabをアップデート、crondを起動
