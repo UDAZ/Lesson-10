@@ -70,6 +70,13 @@ class DailyMailer < ApplicationMailer
     end
 end
 ```
+### ⑤send_when_dailyのviewを作成
+send_when_daily.html.erb
+```
+```
+send_when_daily.text.erb
+```
+```
 まずはbatcherでbundle exec rails runner Batch::〇〇〇〇.〇〇_〇〇を試して、
 wheneverでcrontabをアップデート、crondを起動
 
