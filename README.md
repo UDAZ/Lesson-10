@@ -118,6 +118,10 @@ bundle install
 ```
 bundle exec wheneverize
 ```
+### ⑨wheneverの設定
+config/schedule.rb
+```
+```
 wheneverでcrontabをアップデート、crondを起動
 
 batcherは
