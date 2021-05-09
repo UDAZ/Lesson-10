@@ -134,6 +134,22 @@ every 1.day do
   end
 end
 ```
+### ⑩wheneverの設定をcrontab用に翻訳
+```
+bundle exec whenever
+```
+### ⑪crontabに反映
+```
+bundle exec whenever --update-crontab
+```
+### ⑫cronを起動
+```
+sudo systemctl start crond
+```
+### ⑬cronを停止
+```
+sudo systemctl stop crond
+```
 wheneverでcrontabをアップデート、crondを起動
 
 batcherは
