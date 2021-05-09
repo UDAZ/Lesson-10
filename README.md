@@ -106,7 +106,7 @@ config.paths.add 'lib', eager_load: true
 ```
 bundle exec rails runner Batch::SendMail.send_mail
 ```
-
+### ⑧wheneverのインストール
 wheneverでcrontabをアップデート、crondを起動
 
 batcherは
