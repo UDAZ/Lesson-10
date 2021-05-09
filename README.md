@@ -83,6 +83,8 @@ send_when_daily.text.erb
 
 メール配信のテストです。
 ```
+### ⑥バッチ処理の実装
+#### 
 まずはbatcherでbundle exec rails runner Batch::〇〇〇〇.〇〇_〇〇を試して、
 wheneverでcrontabをアップデート、crondを起動
 
