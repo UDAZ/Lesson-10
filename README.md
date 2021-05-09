@@ -106,7 +106,18 @@ config.paths.add 'lib', eager_load: true
 ```
 bundle exec rails runner Batch::SendMail.send_mail
 ```
-
+### ⑧wheneverのインストール
+Gemfile
+```
+gem 'whenever', require: false
+```
+ターミナル
+```
+bundle install
+```
+```
+bundle exec wheneverize
+```
 wheneverでcrontabをアップデート、crondを起動
 
 batcherは
