@@ -150,17 +150,7 @@ sudo systemctl start crond
 ```
 sudo systemctl stop crond
 ```
-wheneverでcrontabをアップデート、crondを起動
-
-batcherは
-class Batch::SendMail
-  def self.send_mail
-    @users = User.all
-    @users.each do |user|
-    DailyMailer.send_when_daily(user).deliver
-    end
-    p "メールを送信しました。"
-  end
-end
-
-的な感じで！
+### ※bundler: not executable: bin/railsが起きた際の対処法
+```
+bundle exec rake app:update:bin
+```
