@@ -84,7 +84,24 @@ send_when_daily.text.erb
 メール配信のテストです。
 ```
 ### ⑥バッチ処理の実装
-#### ①
+#### ①libフォルダにbatchフォルダを作成、send_mail.rbファイルを作成
+lib/batch/send_mail.rb
+```
+class Batch::SendMail
+  def self.send_mail
+    @users = User.all
+    @users.each do |user|
+    DailyMailer.send_when_daily(user).deliver
+    end
+    p "メールを送信しました。"
+  end
+end
+```
+#### ②バッチ処理の読み込み設定
+config/application.rb
+```
+config.paths.add 'lib', eager_load: true
+```
 まずはbatcherでbundle exec rails runner Batch::〇〇〇〇.〇〇_〇〇を試して、
 wheneverでcrontabをアップデート、crondを起動
 
