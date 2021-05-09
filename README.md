@@ -102,7 +102,11 @@ config/application.rb
 ```
 config.paths.add 'lib', eager_load: true
 ```
-まずはbatcherでbundle exec rails runner Batch::〇〇〇〇.〇〇_〇〇を試して、
+### ⑦バッチ処理の試走
+```
+bundle exec rails runner Batch::SendMail.send_mail
+```
+
 wheneverでcrontabをアップデート、crondを起動
 
 batcherは
